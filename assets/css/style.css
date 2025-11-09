@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+    height: 80px;
+    background-color: #fcfafa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-plane{
+    transform: rotate(315deg);
+}
+.center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.num_button{
+    font-family: "Montserrat", sans-serif;
+}
+.heading_text{
+    font-family: "Open Sans", sans-serif;
+}
+.heading{
+    font-family: "Manrope", sans-serif;
+}
+.button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(11, 229, 11) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px ;
+}
+.button:hover{
+    background-color: rgb(11, 229, 11);
+    color: #fff;
+    font-weight: 700;
+    transition-property: background-color,color;
+    transition-duration: 0.6s;
+}
+.back{
+    background-color: rgb(11, 229, 11);
+}
+.colo{
+   color: rgb(11, 229, 11); 
+}
+.border-colo{
+    border:1px solid rgb(11, 229, 11)
+}
