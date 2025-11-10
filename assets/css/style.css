@@ -1,57 +1,225 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#header{
-    height: 80px;
-    background-color: #fcfafa;
+#header {
+  height: 75px;
+  background-color: #f3efef;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-plane {
+  transform: rotate(315deg);
+}
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.num_button {
+  font-family: "Montserrat", sans-serif;
+}
+.heading_text {
+  font-family: "Open Sans", sans-serif;
+}
+.heading {
+  font-family: "Manrope", sans-serif;
+}
+.back {
+  background-color: #3b9132;
+}
+.colo {
+  color: #3b9132;
+}
+
+.border-colo {
+  border: 1px solid #3b9132;
+}
+.button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #3b9132;
+  color: #3b9132;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-weight: 600;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  border-radius: 15px 0 15px 0;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #3b9132;
+  transition: all 0.6s ease;
+  z-index: 0;
+  transform: translateX(-50%);
+}
+
+/* Hover animation: fill expands from center */
+.button:hover::before {
+  width: 100%;
+}
+
+/* Make text appear above the fill */
+.button span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+
+.button:hover span {
+  color: #fff;
+}
+/* Navbar background */
+#navbar {
+    background-color: #3b9132;
+    color: white;
+    transition: background-color 0.4s ease;
+  }
+  
+  .menu li {
+    position: relative;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-top: 3px solid transparent; 
+    padding: 15px;
+  }
+  
+  /* Hover top line animation */
+  .menu li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.4s ease;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
+  
+  .menu li:hover::before {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.fa-plane{
-    transform: rotate(315deg);
-}
-.center{
+  }
+  
+  /* Hover background without height shift */
+  .menu li:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Active state */
+  .menu li.active {
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+ 
+    padding: 15px;
+  }
+  
+  .menu li.active::before {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+  
+  /* Icon styling */
+  #navbar i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  #navbar i:hover {
+    color: rgba(0, 123, 255, 0.95);
+    transform: scale(1.2);
+  }
+#navbar #navmobile{
+    height: 90vh;
+    width: 70%;
+    position: absolute;
+    left: 0;
+    display: none;
 }
-.num_button{
-    font-family: "Montserrat", sans-serif;
+
+#navmobile .container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
-.heading_text{
-    font-family: "Open Sans", sans-serif;
+
+/* Remove UL padding/margin */
+#navmobile .mobilemenuitem {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
-.heading{
-    font-family: "Manrope", sans-serif;
+
+/* Full-width items */
+#navmobile .mitem {
+  width: 100%;
+  padding: 15px 20px;
+  text-align: start;
+  color: #000;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
-.button{
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgb(11, 229, 11) ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:10px ;
+
+/* Hover */
+#navmobile .mitem:hover {
+  background-color: rgba(83, 240, 83, 0.25);
+  color: #3b9132;
+  transform: scale(1.01);
 }
-.button:hover{
-    background-color: rgb(11, 229, 11);
-    color: #fff;
-    font-weight: 700;
-    transition-property: background-color,color;
-    transition-duration: 0.6s;
+
+/* Active */
+#navmobile .mitem.active {
+  background-color: #3b9132;
+  color: #fff;
+  font-weight: 600;
 }
-.back{
-    background-color: rgb(11, 229, 11);
+
+
+/* Slide-down animation for menu */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-.colo{
-   color: rgb(11, 229, 11); 
+
+#navbar #mobiledetail{
+    position: absolute;
+    width: 72%;
+    height: 170px;
+    right: 0;
+    top: 50px;
 }
-.border-colo{
-    border:1px solid rgb(11, 229, 11)
+.mobilesidemenu{
+  height: 50px;
+  font-weight: 600;
 }

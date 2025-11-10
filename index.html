@@ -16,42 +16,133 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css"/>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- navbar start desktop only -->
     <div class="container-fluid" id="header">
-        <div class="col-lg-9">
+        <!-- navbar start desktop only -->
+        <div class="col-lg-9 d-none d-lg-block">
             <div class="row">
-                <div class="col-lg-4 logo">
+                
+                <div class="col-lg-4 logo col-8">
                    <a href="#" class="text-decoration-none fs-4 fw-bold colo num_button "><i class="fa-solid fa-plane fs-2"></i> Tourism</a>
                 </div>
-                <div class="col-lg-3" style="border-right: 1px solid rgb(11,229,11);">
+            
+                <div class="col-lg-3 d-none d-lg-block" style="border-right: 1px solid #3b9132;">
                     <div class="center">
-                        <div class="col-2"><i class="fa-solid fa-clock colo fs-5 "></i></div>
+                        <div class="col-2"><i class="fas fa-clock colo fs-5 "></i></div>
                         <div class="col-9"><span style="font-size: 16px;" class="num_button"> 09:00 AM - 05:00 PM</span></div>
                     </div>
                    
                 </div>
-                <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                <div class="col-lg-3 d-none d-lg-block d-lg-flex justify-content-center align-items-center">
                     <!-- <div class="center"> -->
                         <div class="col-2"><i class="fa-solid fa-phone colo fs-5 "></i></div>
                         <div class="col-6 text-center"><span style="font-size: 16px;" class="num_button"> +91 12345 67890</span></div>
                     <!-- </div> -->
-                   
                 </div>
-                
-                <div class="col-lg-2">
+                <div class="col-lg-2 d-none d-lg-block">
                     <div class="button">
                         <span class="num_button ">Get a Free Quote</span>
                     </div>
                 </div>
-
+                  
             </div>
         </div>
+        <!-- for mobile device only -->
+         <div class="container d-lg-none d-block">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="col-2">
+                    <i class="fas fa-bars fs-5" id="menubtn"></i>
+                </div>
+                <div class="logo col-9">
+                    <a href="#" class="text-decoration-none fs-4 fw-bold colo num_button "><i class="fa-solid fa-plane fs-2"></i>
+                        Tourism</a>
+                </div>
+                <div class="col-1">
+                    <i class="fa-solid fa-ellipsis-vertical fs-5" id="sidebtn"></i>
+                </div>
+            </div>
+         </div>
+    </div>
+    <!-- navbar menu -->
+    <div class="container-fluid" id="navbar">
+        <!-- desktop mode only -->
+        <div class="container d-none d-lg-block col-lg-10 d-flex justify-content-between align-items-center" style="height: 55px;">
+    
+            <!-- Menu -->
+            <div class="col-lg-6">
+                <ul class="menu d-flex justify-content-around align-items-center mb-0" style="list-style: none;">
+                    <li class="active">Home</li>
+                    <li>About</li>
+                    <li>Gallery</li>
+                    <li>Contact</li>
+                    <li>Blog</li>
+                    <li>Our Tours</li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-2">
+                <ul class="d-flex align-items-center mb-0 justify-content-around" style="list-style: none;">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-google"></i></li>
+                    <li><i class="fas fa-envelope"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                </ul>
+            </div>
+    
+            <!-- Icon -->
+    
+        </div>
+        <!-- mobile mode menubar only -->
+         <div class="col-12 bg-light shadow d-lg-none" id="navmobile" >
+            <div class="container-fluid  d-flex justify-content-around align-items-center" style="height: 80px;border-bottom:1px solid rgba(0,0,0,0.5)">
+                <ul class="d-flex align-items-center mb-0 justify-content-around" style="list-style: none;width:70%">
+                    <li><i class="fa-brands fa-facebook text-dark"></i></li>
+                    <li><i class="fa-brands fa-google text-dark"></i></li>
+                    <li><i class="fas fa-envelope text-dark"></i></li>
+                    <li><i class="fa-brands fa-instagram text-dark"></i></li>
+                </ul>
+            </div>
+            <div class="container-fluid my-4" >
+                <ul class="d-flex text-dark mb-0 mobilemenuitem" style="list-style: none;flex-direction:column;gap:10px;width:100%">
+                    <li class="active mitem">Home</li>
+                    <li class="mitem">About</li>
+                    <li class="mitem">Gallery</li>
+                    <li class="mitem">Contact</li>
+                    <li class="mitem">Blog</li>
+                    <li class="mitem">Our Tours</li>
+                </ul>
+            </div>
+         </div>
+         <!-- mobile mode detail only -->
+         <div class="col-12 bg-light shadow my-4 d-lg-none" id="mobiledetail" style="display: none;">
+            <div class="col-11 container mobilesidemenu py-2">
+                <div class="row">
+                    <div class="col-2"><i class="fas fa-clock colo fs-5" style="color: #3b9132;"></i></div>
+                    <div class="col-10"><span style="font-size: 16px;" class="num_button text-dark"> 09:00 AM - 05:00 PM</span></div>
+                </div>
+            
+            </div>
+            <div class="col-11 container mobilesidemenu py-2">
+                <div class="row">
+                <div class="col-2"><i class="fa-solid fa-phone colo fs-5 " style="color: #3b9132;"></i></div>
+                <div class="col-10"><span style="font-size: 16px;" class="num_button text-dark"> +91 12345 67890</span></div>
+                </div>
+            </div>
+            <div class="col-11 container mobilesidemenu">
+                <div class="button">
+                    <span class="num_button ">Get a Free Quote</span>
+                </div>
+            </div>
+         </div>
     </div>
     <!-- navbar end -->
+    <section id="main" class="container-fluid">
+        <!-- slider section -->
 
+    </section>
 
 
 
