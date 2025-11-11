@@ -36,5 +36,15 @@ $(document).ready(function(){
         .animate({ width: "toggle", opacity: "toggle" }, 500);
     }
   });
-  
+  $(".vertical-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    animateOut: "fadeOut",
+    autoplayTimeout: 4000,
+    dots:true,
+    smartSpeed: 3000,
+    mouseDrag: false,
+    touchDrag: false,
+  });
 })
