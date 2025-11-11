@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 #header {
   height: 75px;
   background-color: #f3efef;
@@ -11,9 +12,11 @@
   justify-content: center;
   align-items: center;
 }
+
 .fa-plane {
   transform: rotate(315deg);
 }
+
 .center {
   width: 100%;
   height: 100%;
@@ -21,18 +24,23 @@
   justify-content: center;
   align-items: center;
 }
+
 .num_button {
   font-family: "Montserrat", sans-serif;
 }
+
 .heading_text {
   font-family: "Open Sans", sans-serif;
 }
+
 .heading {
   font-family: "Manrope", sans-serif;
 }
+
 .back {
   background-color: #3b9132;
 }
+
 .colo {
   color: #3b9132;
 }
@@ -40,6 +48,7 @@
 .border-colo {
   border: 1px solid #3b9132;
 }
+
 .button {
   position: relative;
   width: 100%;
@@ -57,6 +66,7 @@
   transition: color 0.4s ease;
   border-radius: 15px 0 15px 0;
 }
+
 .button::before {
   content: "";
   position: absolute;
@@ -85,84 +95,88 @@
 .button:hover span {
   color: #fff;
 }
+
 /* Navbar background */
 #navbar {
-    background-color: #3b9132;
-    color: white;
-    transition: background-color 0.4s ease;
-  }
-  
-  .menu li {
-    position: relative;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 10px 0;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    border-top: 3px solid transparent; 
-    padding: 15px;
-  }
-  
-  /* Hover top line animation */
-  .menu li::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 0;
-    height: 3px;
-    background: #fff;
-    transition: width 0.4s ease;
-    transform: translateX(-50%);
-    border-radius: 5px;
-  }
-  
-  .menu li:hover::before {
-    width: 100%;
-  }
-  
-  /* Hover background without height shift */
-  .menu li:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Active state */
-  .menu li.active {
-    background: rgba(255, 255, 255, 0.15);
-    font-weight: 600;
- 
-    padding: 15px;
-  }
-  
-  .menu li.active::before {
-    width: 100%;
-  }
-  
-  /* Icon styling */
-  #navbar i {
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  #navbar i:hover {
-    color: rgba(0, 123, 255, 0.95);
-    transform: scale(1.2);
-  }
-  #navbar #navmobile {
-    height: 90vh;
-    width: 70%;
-    position: fixed; /* changed from absolute */
-    top: 75px; /* below header height */
-    left: 0;
-    background-color: #f8f9fa;
-    display: none;
-    z-index: 9999;
-    overflow-y: auto;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
-  }
-  
+  background-color: #3b9132;
+  color: white;
+  transition: background-color 0.4s ease;
+}
+
+.menu li {
+  position: relative;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-top: 3px solid transparent;
+  padding: 15px;
+}
+
+/* Hover top line animation */
+.menu li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  transition: width 0.4s ease;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.menu li:hover::before {
+  width: 100%;
+}
+
+/* Hover background without height shift */
+.menu li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Active state */
+.menu li.active {
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+
+  padding: 15px;
+}
+
+.menu li.active::before {
+  width: 100%;
+}
+
+/* Icon styling */
+#navbar i {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#navbar i:hover {
+  color: rgba(0, 123, 255, 0.95);
+  transform: scale(1.2);
+}
+
+#navbar #navmobile {
+  height: 90vh;
+  width: 70%;
+  position: fixed;
+  /* changed from absolute */
+  top: 75px;
+  /* below header height */
+  left: 0;
+  background-color: #f8f9fa;
+  display: none;
+  z-index: 9999;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+}
+
 
 #navmobile .container-fluid {
   padding-left: 0 !important;
@@ -209,12 +223,13 @@
 /* Slide-down animation for menu */
 @keyframes slideDown {
   0% {
-    transform: translateY(-20px);
-    opacity: 0;
+      transform: translateY(-20px);
+      opacity: 0;
   }
+
   100% {
-    transform: translateY(0);
-    opacity: 1;
+      transform: translateY(0);
+      opacity: 1;
   }
 }
 
@@ -223,23 +238,26 @@
   width: 72%;
   height: 170px;
   right: 0;
-  top: 51px; /* same height as header */
+  top: 51px;
+  /* same height as header */
   background-color: #f8f9fa;
   display: none;
   z-index: 9999;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
 }
 
-.mobilesidemenu{
+.mobilesidemenu {
   height: 50px;
   font-weight: 600;
 }
-#main{
+
+#main {
   height: auto;
   width: 100%;
   padding: 0;
   margin: 0;
 }
+
 .vertical-slider .item {
   height: 90vh;
   display: flex;
@@ -249,14 +267,17 @@
   font-size: 2.5rem;
   transition: all 1s ease;
 }
-.description{
+
+.description {
   position: absolute;
   z-index: 1;
   top: 30%;
   left: 5%;
 }
+
 .touchbtn {
-  position: relative; /* Make ::before stay inside the button */
+  position: relative;
+  /* Make ::before stay inside the button */
   width: 130px;
   height: 55px;
   border: 2px solid #3b9132;
@@ -268,7 +289,8 @@
   background: transparent;
   cursor: pointer;
   transition: color 0.4s ease;
-  overflow: hidden; /* Prevent the fill from overflowing */
+  overflow: hidden;
+  /* Prevent the fill from overflowing */
 }
 
 .touchbtn::before {
@@ -281,7 +303,8 @@
   background: #3b9132;
   transition: all 0.6s ease;
   transform: translateX(-50%);
-  z-index: 0; /* Behind text */
+  z-index: 0;
+  /* Behind text */
 }
 
 .touchbtn:hover::before {
@@ -290,7 +313,8 @@
 
 .touchbtn span {
   position: relative;
-  z-index: 1; /* Keeps text above the fill */
+  z-index: 1;
+  /* Keeps text above the fill */
   transition: color 0.4s ease;
   font-size: 16px;
 }
@@ -301,23 +325,26 @@
 
 
 .slide1 {
-  background:linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url('../img/blog-post-1-568x492.jpg');
-  background-size:cover;
-  background-position:center;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('../img/blog-post-1-568x492.jpg');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
+
 .slide2 {
-  background:linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url('../img/blog-post-2-568x492.jpg');
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('../img/blog-post-2-568x492.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .slide3 {
-  background:linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url('../img/blog-post-3-568x492.jpg');
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('../img/blog-post-3-568x492.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .owl-dots {
   position: absolute;
   top: 50%;
@@ -332,7 +359,8 @@
 .owl-dot span {
   width: 14px;
   height: 14px;
-  border-radius: 4px; /* small box */
+  border-radius: 4px;
+  /* small box */
   border: 2px solid #fff;
   background: transparent;
   display: block;
@@ -345,3 +373,244 @@
   transform: scale(1.1);
 }
 
+.destination-card img {
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+  transform: scale(1.05);
+}
+
+#our_tour {
+  height: 420px;
+  position: relative;
+}
+
+/* Container for each tour card */
+/* ===== OUR TOUR SECTION ===== */
+
+/* Common card styles */
+.tours {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tours img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  transition: transform 0.7s ease-in-out;
+}
+
+.tours:hover img {
+  transform: scale(1.1);
+}
+
+/* Caption on bottom */
+.tour-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.5); */
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 12px 0;
+  transition: background 0.3s ease;
+}
+
+/* .tours:hover .tour-caption {
+  background: rgba(59, 145, 50, 0.8);
+} */
+
+/* ===== OTHER TOURS LINK ===== */
+.othertour {
+  position: relative;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.othertour i {
+  margin-left: 6px;
+  transition: transform 0.4s ease;
+}
+
+.othertour:hover {
+  color: #3b9132;
+}
+
+.othertour:hover i {
+  transform: translateX(6px);
+}
+
+.othertour::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #3b9132;
+  transition: width 0.4s ease;
+}
+
+.othertour:hover::after {
+  width: 100%;
+}
+
+/* ===== DESKTOP VIEW ===== */
+@media (min-width: 992px) {
+  #our_tour {
+    position: relative;
+    height: 450px; /* Space for absolute cards */
+
+  }
+
+  .ourtour-desktop {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 991px) {
+  #our_tour {
+    position: static;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .ourtour-desktop {
+    display: none !important;
+  }
+
+  .ourtour-mobile {
+    position: static;
+  }
+}
+
+
+#body h2 {
+  color: #222;
+  font-weight: 700;
+}
+
+/* ===== TABS ===== */
+#tourTabs {
+  width: 100%;
+}
+
+.tab-header {
+  display: flex;
+  gap: 30px;
+  border-bottom: 2px solid #e0e0e0;
+  position: relative;
+  padding-bottom: 5px;
+  justify-content: flex-start; /* ✅ Default: left align for desktop */
+}
+
+.tab-btn {
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #3b9132;
+}
+
+/* Active tab text */
+.tab-btn.active {
+  color: #3b9132;
+}
+
+/* Underline animation */
+.tab-underline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  background: #3b9132;
+  width: 0;
+  transition: all 0.3s ease;
+}
+
+/* Active underline movement */
+.tab-btn.active ~ .tab-underline {
+  width: 90px; /* Adjust based on active tab width if dynamic JS not used */
+}
+
+/* Tab content */
+.tab-content {
+  margin-top: 20px;
+}
+
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Button links inside tab */
+.tab-link1 {
+  text-decoration: none;
+  color: #3b9132;
+  font-weight: 600;
+  padding: 20px 35px;
+  border: 2px solid #3b9132;
+}
+
+.tab-link1:hover {
+  color: #fff;
+  background-color: #3b9132;
+  transition:background-color,color ease-in-out 0.7s ;
+}
+/* Button links inside tab */
+.tab-link2 {
+  text-decoration: none;
+  background-color: #3b9132;
+  color: #fff;
+  font-weight: 600;
+  padding: 20px 43px;
+}
+
+.tab-link2:hover {
+  color: #3b9132;
+  background-color: #fff;
+  border: 2px solid #3b9132;
+  transition: background-color,color ease-in-out 0.5s;
+}
+
+/* Animation for smooth fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+  .tab-header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+  }
+  
+}

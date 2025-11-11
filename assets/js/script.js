@@ -47,4 +47,24 @@ $(document).ready(function(){
     mouseDrag: false,
     touchDrag: false,
   });
+
+  const $underline = $(".tab-underline");
+  const $firstTab = $(".tab-btn.active");
+  moveUnderline($firstTab);
+
+  $(".tab-btn").click(function () {
+    $(".tab-btn").removeClass("active");
+    $(this).addClass("active");
+    moveUnderline($(this));
+
+    const tabId = $(this).data("tab");
+    $(".tab-panel").removeClass("active");
+    $("#" + tabId).addClass("active");
+  });
+
+  function moveUnderline($tab) {
+    const left = $tab.position().left;
+    const width = $tab.outerWidth();
+    $underline.css({ left: left, width: width });
+  }
 })
