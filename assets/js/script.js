@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
   $("#menubtn").click(function () {
     // If #mobiledetail is visible, close it first
     if ($("#mobiledetail").is(":visible")) {
@@ -42,7 +42,7 @@ $(document).ready(function(){
     autoplay: true,
     animateOut: "fadeOut",
     autoplayTimeout: 4000,
-    dots:true,
+    dots: true,
     smartSpeed: 3000,
     mouseDrag: false,
     touchDrag: false,
@@ -67,4 +67,36 @@ $(document).ready(function(){
     const width = $tab.outerWidth();
     $underline.css({ left: left, width: width });
   }
-})
+
+  let started = false;
+
+  function animateCounters() {
+    $(".count-num").each(function () {
+      let $this = $(this);
+      let countTo = parseInt($this.attr("data-count"));
+      $({ countNum: 0 }).animate(
+        { countNum: countTo },
+        {
+          duration: 2000,
+          easing: "swing",
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+          },
+        }
+      );
+    });
+  }
+
+  $(window).on("scroll", function () {
+    let sectionTop = $("#counter").offset().top;
+    let scrollBottom = $(window).scrollTop() + $(window).height();
+
+    if (!started && scrollBottom > sectionTop) {
+      animateCounters();
+      started = true;
+    }
+  });
+});
