@@ -819,7 +819,7 @@
 /* Button Style */
 #hotel_rooms .book-btn {
   /* display: inline-block; */
-  padding: 10px 25px;
+  padding: 15px 21px;
   background: transparent;
   border: 2px solid #3b9132;
   text-decoration: none;
@@ -871,16 +871,190 @@
 }
 #offer p{
   color: #fff;
-  font-size: 18px; 
+  font-size: 16px; 
+  margin: 30px 0;
 }
-#offer .subscribetxt{
-  background-color: #333;
-  padding:20px 10px;
+/* Input field */
+#offer .subscribetxt {
+  width: 350px;
+  width: 100%;
+  padding: 20px 18px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#offer .subscribetxt:focus {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(59, 145, 50, 0.5);
+}
+
+/* Subscribe button */
+#offer .subscribe-btn {
+  background: #00bfa6;
+  color: white;
+  border: none;
+  padding: 20px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0 4px 4px 0;
+  transition: all 0.3s ease;
   width: 100%;
 }
-#offer .subscribe{
-  background-color: #3b9132;
-  padding:32px 10px;
+
+#offer .subscribe-btn:hover {
+  background: #3b9132;
+  transform: translateY(-2px);
+}
+
+/* ==================== GALLERY SECTION ==================== */
+#gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#gallery .gallery-item img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+#gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Lightbox popup */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
   color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lightbox .close:hover {
+  color: #3b9132;
+}
+
+/* Owl carousel dots */
+#gallery .owl-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#gallery .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+#gallery .owl-dot.active span {
+  background: #3b9132;
+  transform: scale(1.2);
+}
+
+/* ==================== FOOTER ==================== */
+#footer {
+  background: #1b1b1b;
+  color: #d9d9d9;
+  font-family: "Open Sans", sans-serif;
+}
+
+#footer h4 {
+  color: #fff;
+  font-size: 20px;
+}
+
+#footer p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+#footer .footer-links li {
+  margin-bottom: 8px;
+}
+
+#footer .footer-links a {
+  color: #d9d9d9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#footer .footer-links a:hover {
+  color: #3b9132; /* theme green */
+}
+
+/* Social Icons */
+#footer .social-icons a {
+  display: inline-block;
+  color: #d9d9d9;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+#footer .social-icons a:hover {
+  background: #3b9132;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Copyright bar */
+#footer .footer-bottom {
+  background: #111;
+  color: #aaa;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #footer {
+    text-align: center;
+  }
+  #footer .social-icons {
+    justify-content: center;
+  }
 }

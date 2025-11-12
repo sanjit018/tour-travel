@@ -99,4 +99,34 @@ $(document).ready(function () {
       started = true;
     }
   });
+
+  // Initialize Owl Carousel
+  $(".gallery-slider").owlCarousel({
+    items: 3,
+    margin: 20,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    autoplayHoverPause: true,
+    dots: true,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      992: { items: 3 },
+    },
+  });
+
+  // Lightbox (Zoom effect)
+  $(".gallery-item img").on("click", function () {
+    const src = $(this).attr("src");
+    $(".lightbox-img").attr("src", src);
+    $("#lightbox").fadeIn();
+  });
+
+  // Close lightbox
+  $(".close, #lightbox").on("click", function (e) {
+    if (e.target !== $(".lightbox-img")[0]) {
+      $("#lightbox").fadeOut();
+    }
+  });
 });
