@@ -129,4 +129,18 @@ $(document).ready(function () {
       $("#lightbox").fadeOut();
     }
   });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+      $("#backToTop").fadeIn();
+    } else {
+      $("#backToTop").fadeOut();
+    }
+  });
+
+  // Smooth Scroll to Top
+  $("#backToTop").click(function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, 600);
+  });
 });

@@ -1058,3 +1058,198 @@
     justify-content: center;
   }
 }
+/* ===== COOKIE CONSENT ===== */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 14px;
+  z-index: 9999;
+  display: none;
+  animation: slideUp 0.6s ease forwards;
+}
+
+.cookie-consent a {
+  color: #3b9132;
+}
+
+.cookie-buttons .btn {
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Floating Button Container */
+#floating-buttons {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+/* Common Button Style */
+#floating-buttons a {
+  width: 50px;
+  height: 50px;
+  background: #3b9132;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Hover Animation */
+#floating-buttons a:hover {
+  transform: translateY(-4px);
+  background: #2e6f26;
+}
+
+/* WhatsApp Specific */
+#whatsappButton {
+  background-color: #25d366;
+}
+
+#whatsappButton:hover {
+  background-color: #1ebe5d;
+}
+
+/* Hide Back-to-Top by default */
+#backToTop {
+  display: none;
+}
+#contact {
+  background-color: #fdfafa;
+}
+
+#contact .smallbox {
+  height: 220px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hover effect - scale & shadow */
+#contact .smallbox:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-color: #3b9132;
+}
+
+/* Icon styling */
+#contact .smallbox i {
+  font-size: 45px;
+  color: #3b9132;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+/* Icon grows on hover */
+#contact .smallbox:hover i {
+  transform: scale(1.3);
+  color: #2f7229;
+}
+
+/* Divider line */
+#contact .smallbox .partition {
+  border: 2px solid #3b9132;
+  width: 0%;
+  transition: width 0.5s ease;
+  margin: 15px 0;
+}
+
+/* Line expands on hover */
+#contact .smallbox:hover .partition {
+  width: 45%;
+}
+
+/* Text styling */
+#contact .smallbox span {
+  display: block;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+#contact .smallbox:hover span {
+  color: #3b9132;
+}
+
+/* Responsive spacing fix */
+@media (max-width: 768px) {
+  #contact .smallbox {
+    margin-bottom: 15px;
+  }
+}
+#contactForm {
+  background-color: #fdfafa;
+}
+
+#contactForm h2 {
+  font-weight: 700;
+}
+
+#contactForm p {
+  font-size: 16px;
+}
+
+#contactForm .form-control {
+  border-radius: 0;
+  border: 2px solid #e5e5e5;
+  padding: 14px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+#contactForm .form-control:focus {
+  border-color: #3b9132;
+  box-shadow: none;
+}
+
+#contactForm .form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+#contactForm .invalid-feedback {
+  font-size: 14px;
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+#contactForm .send-btn {
+  background-color: #00b7a3;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 40px;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+#contactForm .send-btn:hover {
+  background-color: #009b89;
+  transform: scale(1.02);
+}
