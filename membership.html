@@ -157,45 +157,58 @@
 
     <section id="gallerytop" class="container-fluid mb-3">
         <div class="container col-lg-6 col-12 text-white">
-            <h2 class="text-center heading">Our Gallery</h2>
-            <div class="d-flex justify-content-between container col-3">
-                <a href="index.html" class="text-light text-decoration-none">Home</a>
-                <span>/</span>
-                <a href="gallery.html" class="text-light text-decoration-none">Gallery</a>
-            </div>
+            <h2 class="text-center heading">Premium Travel Membership</h2>
+            <p class="fs-5 mt-3 text-center">Travel More, Spend Less — Enjoy Free Stay, Food & Tour Benefits</p>
         </div>
     </section>
-
-    <section id="photoGallery" class="container col-lg-9 my-5">
     
-        <!-- Filter Buttons -->
-        <div class="text-center mb-4">
-            <button class="btn filter-btn active" data-filter="all">All</button>
-            <button class="btn filter-btn" data-filter="hill">Hill</button>
-            <button class="btn filter-btn" data-filter="sea">Sea Beach</button>
-            <button class="btn filter-btn" data-filter="forest">Forest</button>
-            <button class="btn filter-btn" data-filter="religious">Religious</button>
-        </div>
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
     
-        <!-- Gallery Grid -->
-        <div class="row g-3 gallery-grid">
+                <div class="membership-card shadow-lg p-4 rounded bg-white">
     
-            <!-- Puri -->
-            <div class="col-lg-4 col-md-6 gallery-item" data-category="sea religious">
-                <img src="assets/img/places/puri.jpg" class="gallery-img" alt="Puri">
+                    <!-- Price -->
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">₹5000 / 1 Year</h2>
+                        <p class="text-muted">(2 Adults + 1 Child Under 5 Years)</p>
+                    </div>
+    
+                    <hr>
+    
+                    <!-- Included Packages -->
+                    <h4 class="fw-bold mb-3">Membership Includes</h4>
+    
+                    <ul class="benefits-list">
+                        <li><i class="fa-solid fa-mountain icon"></i> <b>Hill Station Package:</b> 2 Nights – Food & Lodging
+                            Free</li>
+                        <li><i class="fa-solid fa-umbrella-beach icon"></i> <b>Sea Beach Package:</b> 2 Nights / 3 Days Food
+                            & Lodging</li>
+                        <li><i class="fa-solid fa-temple-hindu icon"></i> <b>Tarapith & Deoghar:</b> 2 Nights / 3 Days +
+                            Sightseeing</li>
+                    </ul>
+    
+                    <hr>
+    
+                    <!-- More Details -->
+                    <h4 class="fw-bold mt-4">Membership Details</h4>
+    
+                    <ul class="benefits-list">
+                        <li><i class="fa-solid fa-calendar-check icon"></i> Validity: 1 Year</li>
+                        <li><i class="fa-solid fa-clock icon"></i> Booking must be done within 60 days</li>
+                        <li><i class="fa-solid fa-hotel icon"></i> Choose from partner Hotels / Homestays</li>
+                        <li><i class="fa-solid fa-users icon"></i> For 2 Adults + 1 Child (Below 5 years)</li>
+                        <li><i class="fa-solid fa-phone icon"></i> 24/7 Phone Support Available</li>
+                        <li><i class="fa-solid fa-globe icon"></i> Assistance from our Tourism Support Website</li>
+                    </ul>
+    
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn-primary px-5 py-2">Buy Membership</a>
+                    </div>
+    
+                </div>
+    
             </div>
-    
-            <!-- Darjeeling -->
-            <div class="col-lg-4 col-md-6 gallery-item" data-category="hill">
-                <img src="assets/img/places/FH_dSctVUAABqsn.jpg" class="gallery-img" alt="Darjeeling">
-            </div>
-    
-            <!-- Jaldapara -->
-            <div class="col-lg-4 col-md-6 gallery-item" data-category="forest">
-                <img src="assets/img/places/lava-lolegaon.jpg" class="gallery-img" alt="Jaldapara">
-            </div>
-    
-            <!-- Add More Images Later -->
         </div>
     </section>
     
@@ -291,38 +304,6 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>
-        $(document).ready(function () {
-
-            // Filter Images
-            $('.filter-btn').click(function () {
-                let filter = $(this).data('filter');
-
-                $('.filter-btn').removeClass('active');
-                $(this).addClass('active');
-
-                if (filter === "all") {
-                    $('.gallery-item').fadeIn();
-                } else {
-                    $('.gallery-item').hide();
-                    $(`.gallery-item[data-category*="${filter}"]`).fadeIn();
-                }
-            });
-
-            // Lightbox
-            $(".gallery-img").click(function () {
-                let src = $(this).attr("src");
-                $("#lightboxImage").attr("src", src);
-                $("#lightboxOverlay").fadeIn();
-            });
-
-            $("#lightboxClose, #lightboxOverlay").click(function () {
-                $("#lightboxOverlay").fadeOut();
-            });
-
-        });
-    </script>
-        
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.23.0/dist/sweetalert2.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -331,7 +312,6 @@
             duration: 800
         });
     </script>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cookieBox = document.getElementById("cookieConsent");

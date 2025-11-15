@@ -1319,3 +1319,81 @@
   width: 100%;
   object-fit: cover;
 }
+.membership-hero {
+  background: url('../img/maldives-islands-ocean-tropical-beach-600nw-1938868960.webp') center/cover no-repeat;
+  height: 300px;
+}
+
+.membership-card {
+  border-radius: 15px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.benefits-list li {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.benefits-list .icon {
+  color: #0d6efd;
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+/* Filter Buttons */
+#photoGallery .filter-btn {
+    background: #3b9132;
+    color: #fff;
+    margin: 3px;
+    border-radius: 20px;
+    padding: 6px 18px;
+    transition: all 0.3s ease;
+}
+#photoGallery .filter-btn:hover,
+#photoGallery .filter-btn.active {
+    background: #2f7a28;
+}
+
+/* Gallery Grid */
+.gallery-img {
+    width: 100%;
+    border-radius: 10px;
+    height: 260px;
+    object-fit: cover;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+#lightboxOverlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+#lightboxOverlay img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+#lightboxClose {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
