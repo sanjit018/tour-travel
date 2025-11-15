@@ -280,8 +280,8 @@
   /* Make ::before stay inside the button */
   width: 130px;
   height: 55px;
-  border: 2px solid #3b9132;
-  color: #3b9132;
+  border: 2px solid #fff;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,7 +318,9 @@
   transition: color 0.4s ease;
   font-size: 16px;
 }
-
+.touchbtn:hover{
+  border:1px solid #3b9132;
+}
 .touchbtn:hover span {
   color: #fff;
 }
@@ -1252,4 +1254,68 @@
 #contactForm .send-btn:hover {
   background-color: #009b89;
   transform: scale(1.02);
+}
+
+#gallerytop{
+  width: 100%;
+  height: 350px;
+  background:linear-gradient(90deg,rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url("../img/maldives-islands-ocean-tropical-beach-600nw-1938868960.webp") ;
+  background-size:cover ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gallerytop h2{
+  font-size: 50px;
+  font-weight: 700;
+}
+#gallerytop a,#gallerytop span{
+  font-size: 18px;
+}
+#destinationTabs .nav-link {
+  background: #e9ecef;
+  color: #000;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-weight: 600;
+}
+
+#destinationTabs .nav-link.active {
+  background: #3b9132 !important;
+  color: #fff !important;
+}
+.room-card {
+  display: none !important;
+}
+.room-card.show {
+  display: flex !important;
+}
+#callButton {
+  position: fixed;
+  bottom: 160px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: .3s;
+}
+
+#callButton:hover {
+  transform: scale(1.1);
+}
+.room-slider img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
